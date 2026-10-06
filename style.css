@@ -1,0 +1,74 @@
+/* Color + Type System */
+:root {
+  --brand: #0077ff;
+  --bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --text: #222222;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Ensure images never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header with Flexbox */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--card-bg);
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--brand);
+}
+
+section {
+  padding: 2rem;
+}
+
+/* Base Projects Layout: 1 Column Mobile-First */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive Breakpoint: 2 Columns on Tablets/Desktops */
+@media (min-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Responsive Breakpoint: 3 Columns on Large Displays */
+@media (min-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--card-bg);
+}
